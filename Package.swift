@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftJailbreakDetection",
+    platforms: [
+        .iOS(.v11)
+    ],
     products: [
         .library(
             name: "SwiftJailbreakDetection",

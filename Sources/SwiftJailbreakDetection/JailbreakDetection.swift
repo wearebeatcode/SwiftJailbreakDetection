@@ -1,8 +1,8 @@
 import UIKit
 
-struct JailbreakDetection {
+public struct JailbreakDetection {
     
-    static var isJailbroken: Bool {
+    public static var isJailbroken: Bool {
         
         #if targetEnvironment(simulator)
             return false
@@ -43,7 +43,7 @@ struct JailbreakDetection {
         }
     }
     
-    static func canOpen(path: String) -> Bool {
+    private static func canOpen(path: String) -> Bool {
         let file = fopen(path, "r")
         guard file != nil else { return false }
         fclose(file)

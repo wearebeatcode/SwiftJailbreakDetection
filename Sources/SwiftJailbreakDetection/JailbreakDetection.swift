@@ -4,7 +4,9 @@ public struct JailbreakDetection {
     
     public static var isJailbroken: Bool {
         
-        #if targetEnvironment(simulator)
+        #if targetEnvironment(simulator) ||
+            return false
+        #elseif targetEnvironment(macCatalyst)
             return false
         #endif
         
